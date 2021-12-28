@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+:root {
+  --blue: #0097e6;
+  --black: #000;
+  --white: #fff;
+  --light-color: #aaa;
+  --light-bg: #0a0a0a;
+  --border: 0.2rem solid rgba(255, 255, 255, 0.2);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--black);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--black);
+  padding: 1.5rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border);
+  /* transform: translateY(-20rem); */
+}
+
+.header.active {
+  transform: translateY(0rem);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  color: var(--white);
+  text-transform: capitalize;
+  margin: 0 1.5rem;
+}
+
+.header .navbar a:hover {
+  color: var(--blue);
+}
+
+.header .icons div,
+.header .icons a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  background: var(--white);
+  color: var(--black);
+  margin-left: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header .icons div:hover,
+.header .icons a:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.header .search-form {
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  height: 6rem;
+  gap: 1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.header .search-form.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header .search-form input {
+  width: 100%;
+  background: none;
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.header .search-form label {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.header .search-form label:hover {
+  color: var(--blue);
+}
