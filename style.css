@@ -476,3 +476,64 @@ section {
   height: 15rem;
   resize: none;
 }
+
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+
+.blogs .box-container .box {
+  text-align: center;
+}
+
+.blogs .box-container .box:hover .images img {
+  transform: scale(1.1);
+}
+
+.blogs .box-container .box .images {
+  height: 30rem;
+  overflow: hidden;
+}
+
+.blogs .box-container .box .images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blogs .box-container .box .content {
+  padding-top: 2rem;
+}
+
+.blogs .box-container .box .content h3 {
+  font-size: 2rem;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.blogs .box-container .box .content p {
+  font-size: 1.6rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding: 1.5rem 0;
+  padding: 1rem 2rem;
+}
+
+.blogs .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: var(--light-bg);
+  margin-top: 2rem;
+}
+
+.blogs .box-container .box .content .icons a {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+.blogs .box-container .box .content .icons a:hover {
+  color: var(--blue);
+}
