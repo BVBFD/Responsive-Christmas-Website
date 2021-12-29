@@ -388,3 +388,48 @@ section {
   font-size: 1.5rem;
   text-decoration: line-through;
 }
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box {
+  text-align: center;
+  padding: 3rem;
+}
+
+.services .box-container .box:nth-child(even) {
+  background: #0a0a0a;
+  border-radius: 0.5rem;
+}
+
+.services .box-container .box:hover i {
+  transform: translateY(-1rem);
+}
+
+.services .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--white);
+  background: var(--blue);
+  margin-bottom: 1.5rem;
+}
+
+.services .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.services .box-container .box p {
+  font-size: 1.6rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding: 1.5rem 0;
+  padding-bottom: 0;
+}
